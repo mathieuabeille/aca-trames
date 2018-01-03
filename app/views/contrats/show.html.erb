@@ -1,0 +1,38 @@
+<div class="container-form"><p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @contrat.name %></p>
+      <p> <strong>Type de contrat:</strong><%= @contrat.typecontrat %></p>
+      <p> <strong>Numero du contrat:</strong><%= @contrat.ids %></p>
+      <p> <strong>Objet:</strong><%= @contrat.objet %></p>
+      <p> <strong>Référence:</strong><%= @contrat.reference %></p>
+      <p> <strong>Code Comptabilité:</strong><%= @contrat.codecomptabilitecharges %></p>
+      <p> <strong>Code Fournisseur:</strong><%= @contrat.codecomptabilitefournisseurs%></p>
+      <p> <strong>Montant HT:</strong><%= @contrat.montantht%></p>
+      <p> <strong>Périodicité:</strong><%= @contrat.montantttc %></p>
+      <p><%= @contrat.periodicite %></p>
+      <p><strong>Montant Annuel de la prestation:</strong><%= @contrat.montantannueldelaprestation%></p>
+      <p><strong>Indice Indexation:</strong><%= @contrat.indiceindexation%></p>
+      <p><strong>Valeur Indice:</strong><%= @contrat.valeurindice %></p>
+      <p><strong>Durée Contrat:</strong><%= @contrat.dureecontrat %></p>
+      <p><strong>Préavis de résiliation:</strong><%= @contrat.preavisresiliation %></p>
+      <p><strong>Date avenant:</strong><%= @contrat.dateavenants %></p>
+      <p><strong>Durée Avenant:</strong><%= @contrat.dureeavenant %></p>
+      <p><strong>Date effet:</strong><%= @contrat.dateeffet %></p>
+      <p><strong>Commentaire:</strong><%= @contrat.commentaire %></p>
+      <p><strong>Type de contrat:</strong><%= @contrat.typecontrat %></p>
+      <p><strong>Préavis de resiliation:</strong><%= @contrat.preavisresiliation %></p>
+      <p><strong>Fréquence échéanciers:</strong><%= @contrat.frequenceecheanciers %></p>
+      <p><strong>Durée amortissement:</strong><%= @contrat.dureeamortissement %></p>
+      <p><strong>Caution:</strong><%= @contrat.caution %></p>
+      <p><strong>Montant Période:</strong><%= @contrat.montantperiode %></p>
+      <p><strong>Montant Option Achat:</strong><%= @contrat.montantoptionachat %></p>
+
+
+
+</p>
+
+<%= link_to 'Edit', edit_contrat_path(@contrat) %> |
+<%= link_to 'Back', contrats_path %>
+</div>

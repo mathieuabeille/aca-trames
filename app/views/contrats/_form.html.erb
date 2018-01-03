@@ -1,0 +1,36 @@
+<div class="container-form">
+  <%= simple_form_for(@contrat) do |f| %>
+    <%= f.error_notification %>
+      <div class="form-inputs">
+        <%= f.input :name, label:"Nom du contrat" %>
+        <%= f.input :typecontrat, label:"Type de contrat" %>
+        <%= f.input :ids, label:"Numéro de contrat" %>
+        <%= f.input :objet, label:"Objet" %>
+        <%= f.input :reference, label:"Référence de l'objet" %>
+        <%= f.input :codecomptabilitecharges, label:"Code comptabilité" %>
+        <%= f.input :codecomptabilitefournisseurs, label:"Code fournisseur"%>
+        <%= f.input :montantht, label:"Montant Hors Taxes"%>
+        <%= f.input :montantttc, label:"Montant TTC" %>
+        <%= f.input :periodicite, label:"Périodicité" %>
+        <%= f.input :montantannueldelaprestation, label:"Montant de la prestation" %>
+        <%= f.input :indiceindexation, label:"Indice indexation" %>
+        <%= f.input :valeurindice, label:"Valeur de l'indice" %>
+        <%= f.input :dureecontrat, label:"Durée du contrat" %>
+        <%= f.input :preavisresiliation, label:"Préavis de resiliation" %>
+        <%= f.input :dateavenants, label:"Date des avenants" %>
+        <%= f.input :dureeavenant, label:"Durée des avenants" %>
+        <%= f.input :dateeffet, label:"Date d'effet de L'avenant" %>
+        <%= f.input :commentaire, label:"Commentaire" %>
+        <%= f.input :typecontrat, label:"Type de contrat" %>
+        <%= f.input :preavisresiliation, label:"Préavis de résiliation" %>
+        <%= f.input :frequenceecheanciers, label:"Fréquence de l'échéancier" %>
+        <%= f.input :dureeamortissement, label:"Durée de l'amortissement" %>
+        <%= f.input :caution, label:"Montant de la caution" %>
+        <%= f.input :montantperiode, label:"Montant pour la période" %>
+        <%= f.input :montantoptionachat, label:"Montant de l'option d'achat" %>
+      </div>
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+</div>

@@ -16,9 +16,19 @@
 
       <p><strong>Commentaire:</strong><%= @contrat.commentaire %></p>
 
+
+
 <% if @contrat.photo? %>
-  <%= cl_image_tag @contrat.photo.path, width: 200, height: 300, crop: :fill %>
-<% end %>
+<%= link_to "Facture","http://res.cloudinary.com/mathieuabeille/image/upload/#{@contrat.photo.path}" %><br/>
+          <%= link_to "http://res.cloudinary.com/mathieuabeille/image/upload/#{@contrat.photo.path}" do %>
+
+          <%= cl_image_tag @contrat.photo.path, as: :attachinary, width: 200, height: 300, crop: :fill,  style: "@media screen and (max-width: 640px) { width: 100px;
+}", crop: :fill %>
+          </center>
+          <% end %>
+          <% end %>
+
+
 
 </div>
 
@@ -35,8 +45,8 @@
 
 
       <p> <strong>Montant HT:</strong><%= @contrat.montantht%></p>
-      <p> <strong>Périodicité:</strong><%= @contrat.montantttc %></p>
-      <p><%= @contrat.periodicite %></p>
+      <p> <strong>Montant TTC:</strong><%= @contrat.montantttc %></p>
+      <p><strong>Périodicité:</strong><%= @contrat.periodicite %></p>
       <p><strong>Montant Annuel de la prestation:</strong><%= @contrat.montantannueldelaprestation%></p>
       <p><strong>Indice Indexation:</strong><%= @contrat.indiceindexation%></p>
       <p><strong>Valeur Indice:</strong><%= @contrat.valeurindice %></p>
@@ -51,9 +61,8 @@
 
         <strong>Durée Contrat:</strong><%= @contrat.dureecontrat %></p>
       <p><strong>Préavis de résiliation:</strong><%= @contrat.preavisresiliation %></p>
-      <p><strong>Date avenant:</strong><%= @contrat.dateavenants %></p>
-      <p><strong>Durée Avenant:</strong><%= @contrat.dureeavenant %></p>
-      <p><strong>Date effet:</strong><%= @contrat.dateeffet %></p>
+       <p><strong>Date de début:</strong><%= @contrat.datedebut %></p>
+        <p><strong>Date de fin:</strong><%= @contrat.datefin %></p>
       <p><strong>Durée amortissement:</strong><%= @contrat.dureeamortissement %></p>
 
 

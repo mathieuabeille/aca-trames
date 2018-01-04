@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180104141640) do
+ActiveRecord::Schema.define(version: 20180104162338) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,6 +59,8 @@ ActiveRecord::Schema.define(version: 20180104141640) do
     t.integer "montantperiode"
     t.integer "montantoptionachat"
     t.string "photo"
+    t.date "datedebut"
+    t.date "datefin"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,7 +1,15 @@
-<div class="container-form">
+
   <%= simple_form_for(@contrat) do |f| %>
     <%= f.error_notification %>
       <div class="form-inputs">
+        <div class="container-form">
+               <h2>Upload du contrat</h2>
+               <center>
+        <%= f.input :contratpdf, label:false %>
+        <%= f.input :contratpdf_cache, as: :hidden %></center>
+</div>
+   <div class="container-form">
+          <h2>Informations générales</h2>
         <%= f.input :name, label:"Nom du contrat" %>
         <%= f.input :typecontrat, label:"Type de contrat" %>
         <%= f.input :ids, label:"Numéro de contrat" %>
@@ -9,28 +17,38 @@
         <%= f.input :reference, label:"Référence de l'objet" %>
         <%= f.input :codecomptabilitecharges, label:"Code comptabilité" %>
         <%= f.input :codecomptabilitefournisseurs, label:"Code fournisseur"%>
+        <%= f.input :commentaire, label:"Commentaire" %>
+        <%= f.input :typecontrat, label:"Type de contrat" %>
+        </div>
+
+        <div class="container-form">
+          <h2>Informations générales</h2>
         <%= f.input :montantht, label:"Montant Hors Taxes"%>
         <%= f.input :montantttc, label:"Montant TTC" %>
         <%= f.input :periodicite, label:"Périodicité" %>
         <%= f.input :montantannueldelaprestation, label:"Montant de la prestation" %>
         <%= f.input :indiceindexation, label:"Indice indexation" %>
         <%= f.input :valeurindice, label:"Valeur de l'indice" %>
+        </div>
+
+        <div class="container-form">
+          <h2>Échéances</h2>
         <%= f.input :dureecontrat, label:"Durée du contrat" %>
         <%= f.input :preavisresiliation, label:"Préavis de resiliation" %>
-        <%= f.input :dateavenants, label:"Date des avenants" %>
-        <%= f.input :dureeavenant, label:"Durée des avenants" %>
-        <%= f.input :dateeffet, label:"Date d'effet de L'avenant" %>
-        <%= f.input :commentaire, label:"Commentaire" %>
-        <%= f.input :typecontrat, label:"Type de contrat" %>
+
+
         <%= f.input :preavisresiliation, label:"Préavis de résiliation" %>
         <%= f.input :frequenceecheanciers, label:"Fréquence de l'échéancier" %>
         <%= f.input :dureeamortissement, label:"Durée de l'amortissement" %>
         <%= f.input :caution, label:"Montant de la caution" %>
         <%= f.input :montantperiode, label:"Montant pour la période" %>
         <%= f.input :montantoptionachat, label:"Montant de l'option d'achat" %>
+
       </div>
-    <div class="form-actions">
-      <%= f.button :submit %>
+      </div>
+
+    <div class="form-actions"> <div class="container-form">
+      <center><%= f.button :submit %></center></div>
     </div>
   <% end %>
 </div>

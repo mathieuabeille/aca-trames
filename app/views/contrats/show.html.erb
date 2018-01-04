@@ -1,5 +1,9 @@
-<div class="container-form"><p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
 
+    <div class="col-xs-6">
+      <div class="container-form">
+<h2>Informations générales</h2>
 <p>
   <strong>Name:</strong>
   <%= @contrat.name %></p>
@@ -9,30 +13,67 @@
       <p> <strong>Référence:</strong><%= @contrat.reference %></p>
       <p> <strong>Code Comptabilité:</strong><%= @contrat.codecomptabilitecharges %></p>
       <p> <strong>Code Fournisseur:</strong><%= @contrat.codecomptabilitefournisseurs%></p>
+
+      <p><strong>Commentaire:</strong><%= @contrat.commentaire %></p>
+
+<%= cl_image_tag @contrat.contratpdf, height: 300, width: 400, crop: :fill %>
+
+</div>
+
+      <div class="container-form">
+
+        <h2>Liaisons</h2><br/><br/><br/><br/>
+</div>
+    </div>
+
+    <div class="col-xs-6">
+      <div class="container-form"></p>
+<h2>Éléments financiers</h2>
+
+
+
       <p> <strong>Montant HT:</strong><%= @contrat.montantht%></p>
       <p> <strong>Périodicité:</strong><%= @contrat.montantttc %></p>
       <p><%= @contrat.periodicite %></p>
       <p><strong>Montant Annuel de la prestation:</strong><%= @contrat.montantannueldelaprestation%></p>
       <p><strong>Indice Indexation:</strong><%= @contrat.indiceindexation%></p>
       <p><strong>Valeur Indice:</strong><%= @contrat.valeurindice %></p>
-      <p><strong>Durée Contrat:</strong><%= @contrat.dureecontrat %></p>
+      <p>
+           <p><strong>Caution:</strong><%= @contrat.caution %></p>
+                 <p><strong>Montant Période:</strong><%= @contrat.montantperiode %></p>
+      <p><strong>Montant Option Achat:</strong><%= @contrat.montantoptionachat %></p>
+    </div>
+    <div class="container-form">
+<h2>Écheances</h2>
+
+
+        <strong>Durée Contrat:</strong><%= @contrat.dureecontrat %></p>
       <p><strong>Préavis de résiliation:</strong><%= @contrat.preavisresiliation %></p>
       <p><strong>Date avenant:</strong><%= @contrat.dateavenants %></p>
       <p><strong>Durée Avenant:</strong><%= @contrat.dureeavenant %></p>
       <p><strong>Date effet:</strong><%= @contrat.dateeffet %></p>
-      <p><strong>Commentaire:</strong><%= @contrat.commentaire %></p>
-      <p><strong>Type de contrat:</strong><%= @contrat.typecontrat %></p>
-      <p><strong>Préavis de resiliation:</strong><%= @contrat.preavisresiliation %></p>
-      <p><strong>Fréquence échéanciers:</strong><%= @contrat.frequenceecheanciers %></p>
       <p><strong>Durée amortissement:</strong><%= @contrat.dureeamortissement %></p>
-      <p><strong>Caution:</strong><%= @contrat.caution %></p>
-      <p><strong>Montant Période:</strong><%= @contrat.montantperiode %></p>
-      <p><strong>Montant Option Achat:</strong><%= @contrat.montantoptionachat %></p>
 
 
+</div>
+    </div>
 
-</p>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+
+    <div class="col-xs-12">
+      <div class="container-form">
+
+        <h2>Avenants</h2><br/><br/><br/><br/>
+</div></div></div></div>
+
+
 
 <%= link_to 'Edit', edit_contrat_path(@contrat) %> |
 <%= link_to 'Back', contrats_path %>
-</div>
+
+
+
+

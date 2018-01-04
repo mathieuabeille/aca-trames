@@ -1,29 +1,47 @@
 <div class="container-form">
   <p id="notice"><%= notice %></p>
+<center><h2>Mes contrats</h2></center>
+<div class="wrapper">
 
-  <h1>Contrats</h1>
+  <div class="table">
 
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+    <div class="rowa header">
+      <div class="cell">
+        Nom du contrat
+      </div>
+      <div class="cell">
+        Type de contrat
+      </div>
+      <div class="cell">
+        Objet du contrat
+      </div>
+      <div class="cell">
+      Action
+      </div>
+    </div>
 
-    <tbody>
-      <% @contrats.each do |contrat| %>
+ <% @contrats.each do |contrat| %>
         <tr>
-          <td><%= contrat.name %></td>
-          <td><%= link_to 'Show', contrat %></td>
-          <td><%= link_to 'Edit', edit_contrat_path(contrat) %></td>
-          <td><%= link_to 'Destroy', contrat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+
+    <div class="rowa">
+      <div class="cell" data-title="Name">
+       <%= contrat.name %>
+      </div>
+      <div class="cell" data-title="Age">
+        <%= contrat.typecontrat %>
+      </div>
+      <div class="cell" data-title="Occupation">
+        <%= contrat.objet %>
+      </div>
+      <div class="cell" data-title="Location">
+        <%= link_to 'Visualiser', contrat %>
+        <%= link_to 'Editer', edit_contrat_path(contrat) %>
+        <%= link_to 'Supprimer', contrat, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div>
+  <% end %>
 
   <br>
-
-  <%= link_to 'New Contrat', new_contrat_path %>
+<center>
+  <%= link_to 'Nouveau Contrat', new_contrat_path %></center><br/>
 </div>

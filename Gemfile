@@ -10,6 +10,7 @@ gem 'rails', '5.1.4'
 gem 'redis'
 gem 'figaro'
 gem 'carrierwave', '~> 0.11.2'
+gem 'cloudinary'
 
 
 gem 'autoprefixer-rails'

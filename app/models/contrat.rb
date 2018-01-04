@@ -1,4 +1,4 @@
 
 class Contrat < ApplicationRecord
-  mount_uploader :contratpdf, PhotoUploader
+  mount_uploader :photo, PhotoUploader
 end

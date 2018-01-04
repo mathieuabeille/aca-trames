@@ -69,6 +69,6 @@ class ContratsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contrat_params
-      params.require(:contrat).permit(:name, :contratpdf, :contratpdf_cache, :id,:objet, :reference, :codecomptabilitecharges, :codecomptabilitefournisseurs, :montantht, :montantttc, :periodicite, :montantannueldelaprestation, :indiceindexation, :valeurindice, :dureecontrat, :preavisderesiliation, :dateavenants, :dureeavenant, :dateeffet, :commentaire, :typecontrat, :preavisresiliation, :frequenceecheanciers, :periodicite, :dureeamortissement, :caution, :montantperiode, :montantoptionachat)
+      params.require(:contrat).permit(:name, :photo, :photo_cache, :id,:objet, :reference, :codecomptabilitecharges, :codecomptabilitefournisseurs, :montantht, :montantttc, :periodicite, :montantannueldelaprestation, :indiceindexation, :valeurindice, :dureecontrat, :preavisderesiliation, :dateavenants, :dureeavenant, :dateeffet, :commentaire, :typecontrat, :preavisresiliation, :frequenceecheanciers, :periodicite, :dureeamortissement, :caution, :montantperiode, :montantoptionachat)
     end
 end

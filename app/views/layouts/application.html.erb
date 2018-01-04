@@ -15,5 +15,7 @@
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
+    <%= cloudinary_js_config %> <!-- Append this after the main `javascript_include_tag`. -->
+
   </body>
 </html>

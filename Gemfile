@@ -9,8 +9,6 @@ gem 'rails', '5.1.4'
 gem 'redis'
 gem 'figaro'
 gem 'carrierwave', '~> 0.11.2'
-gem 'cloudinary'
-
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
@@ -19,6 +17,11 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker', '~> 3.0'
+
+gem 'cloudinary', '1.1.7'
+gem 'attachinary', github: 'assembler/attachinary'
+gem 'jquery-fileupload-rails'
+gem 'coffee-rails'
 
 
 group :development do

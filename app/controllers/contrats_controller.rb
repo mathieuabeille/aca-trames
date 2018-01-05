@@ -5,11 +5,13 @@ class ContratsController < ApplicationController
   # GET /contrats.json
   def index
     @contrats = Contrat.all
+
   end
 
   # GET /contrats/1
   # GET /contrats/1.json
   def show
+      @avenant = Avenant.new
   end
 
   # GET /contrats/new

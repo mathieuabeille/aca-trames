@@ -22,7 +22,10 @@ gem 'cloudinary', '1.1.7'
 gem 'attachinary', github: 'assembler/attachinary'
 gem 'jquery-fileupload-rails'
 gem 'coffee-rails'
-
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '~> 1.2'
+gem 'activeadmin', github: 'activeadmin/activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
